@@ -1,60 +1,74 @@
-Flutter Windows Runner
-![App Icon]​
+# Flutter Windows Runner
 
-Overview
-This project is a custom Flutter Windows runner written in C++. It provides a native host window to embed your Flutter app, manages plugin registration, window configuration, and native-Windows integration features.
+A native C++ host that embeds a Flutter application as a Windows desktop app.
 
-Features
-Hosts a Flutter app on Windows
+---
 
-Handles window creation, DPI awareness, and dark mode support
+## Project Overview
 
-Integrates with Flutter plugins
+This project provides the Windows embedding for your Flutter application, utilizing a native C++ window host. It supports seamless integration with Flutter plugins, window configuration, and Windows-specific features including DPI scaling and theming.
 
-Customizable window logic via C++ code
+---
 
-Project Structure
-File	Purpose
-main.cpp	Entry point for the Windows runner
-flutter_window.cpp/h	Host for the Flutter app view, manages plugin registration and window events
-win32_window.cpp/h	Abstraction for DPI-aware Win32 windows, message handling, and theme adaptation
-utils.cpp/h	Utility functions for command-line parsing, console output redirection
-resource.h	Windows resource identifiers (e.g., app icon)
-Runner.rc	Resource file linking icons and other assets
-app_icon.jpg	App icon used in the Windows application
-Getting Started
-Prerequisites
-Flutter SDK (Windows Desktop support enabled)
+## Features
 
-Visual Studio with C++ development tools
+- Embed Flutter apps natively on Windows platforms.
+- Customizable native window with DPI awareness and dark mode support.
+- Integrates and registers Flutter plugins dynamically.
+- Easily extendable via C++ for advanced native integrations.
 
-Setup
-Clone this repository.
+---
 
-Open the project in Visual Studio (or your C++ IDE).
+## Project Structure
 
-Ensure Flutter is installed and your environment is set up for Windows desktop development.
+| File                  | Description                                                        |
+|-----------------------|--------------------------------------------------------------------|
+| `main.cpp`            | Application entry point and window management.                     |
+| `flutter_window.cpp/h`| Hosts the Flutter view and registers plugins.                      |
+| `win32_window.cpp/h`  | Implements DPI-aware and themeable Win32 windowing.                |
+| `utils.cpp/h`         | Utilities for argument parsing and console setup.                  |
+| `resource.h`          | Resource identifiers, such as icons.                               |
+| `Runner.rc`           | Resource script for including the application icon.                |
+| `app_icon.jpg`        | Windows app icon asset.                                            |
 
-If this is part of a larger Flutter app, place your Flutter build in the expected location for the runner.
+---
 
-Build and Run
-Build the solution in Visual Studio.
+## Prerequisites
 
-Run the resulting executable, or launch via Flutter tooling (flutter run), which starts the Windows runner.
+- Flutter SDK (Windows desktop support enabled)
+- Visual Studio with C++ development tools
 
-How It Works
-The C++ runner sets up a native window and hosts the Flutter engine.
+---
 
-Plugins are registered automatically via flutter_generated_plugin_registrant.h.
+## Getting Started
 
-App logic (UI, business logic) remains inside the main Flutter (Dart) project; the C++ code handles only the host aspects.
+1. **Clone the repository:**
+git clone <repository-url>
 
-Customization
-To change window properties (size, title, etc.), edit main.cpp and win32_window.cpp.
+2. **Open the project in Visual Studio or a compatible IDE.**
+3. **Ensure Flutter SDK and necessary dependencies are installed.**
+4. **Build the solution** using your IDE or command line.
 
-Add or modify native functionality in the respective header/source files as needed.
+---
 
-License
-This project typically inherits licensing from the main Flutter project. Add custom license info here if required.
+## Running the Application
 
-For further details, consult official Flutter Windows embedding docs.
+To launch the app, use Visual Studio's run/debug options, or run via `flutter run` from your terminal (make sure desktop support is enabled).
+
+---
+
+## Customization
+
+To customize the window (size, title, integrations), modify `main.cpp` and relevant classes in `win32_window.cpp/h`. For plugin support or new integrations, extend `flutter_window.cpp/h` as required.
+
+---
+
+## License
+
+This project is distributed under the license of the main Flutter project, or as specified by your organization.
+
+---
+
+For further reference, see the [Flutter Windows documentation](https://docs.flutter.dev/desktop#supported-platforms).
+
+
