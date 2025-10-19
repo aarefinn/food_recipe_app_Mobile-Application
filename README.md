@@ -1,4 +1,4 @@
-# Flutter Windows Runner
+# Food Recipie
 
 A native C++ host that embeds a Flutter application as a Windows desktop app.
 
@@ -6,7 +6,7 @@ A native C++ host that embeds a Flutter application as a Windows desktop app.
 
 ## Project Overview
 
-This project provides the Windows embedding for your Flutter application, utilizing a native C++ window host. It supports seamless integration with Flutter plugins, window configuration, and Windows-specific features including DPI scaling and theming.
+This project provides the Windows embedding for your Flutter application, utilizing a native C++ window host. It supports seamless integration with Flutter plugins, window configuration, and Windows-specific features, including DPI scaling and theming.
 
 ---
 
@@ -43,7 +43,7 @@ This project provides the Windows embedding for your Flutter application, utiliz
 ## Getting Started
 
 1. **Clone the repository:**
-git clone <repository-url>
+git clone [<repository-url>](https://github.com/aarefinn/MobileApplication_Food_Recipe)
 
 2. **Open the project in Visual Studio or a compatible IDE.**
 3. **Ensure Flutter SDK and necessary dependencies are installed.**
